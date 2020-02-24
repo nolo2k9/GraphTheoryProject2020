@@ -17,7 +17,7 @@ class State:
 
 
 
-class Frag:
+class Fragment:
     '''Start State of NFA fragment '''
     start = None
     '''Accept state of NFA Fragment'''
@@ -28,10 +28,21 @@ class Frag:
         self.start = start
         self.accept = accept
 
+def regular_ex_compile(regular_ex):
 
-my_instance = State(label='a', edges=[])
-my_other_instance = State(edges=[my_instance])
-my_fragment = Frag(my_instance, my_other_instance)
-print(my_instance.label)
-print(my_other_instance.edges[0])
-print(my_fragment)
+
+
+
+'''
+ This function takes in a regular expression and checks to see whether it matchs a string(s) if it matchs it will return (true) otherwise it will return a false
+'''
+def match(regular_ex, s):
+        '''
+        nfa = non deterministic finite automoton
+        regular_ex_compile will give us the nfa that does what the regular expression is meant to do
+        '''
+        nfa = regular_ex_compile(regular_ex)
+        '''will tell us if the nfa matchs the string'''
+       return nfa.match(s)
+
+
