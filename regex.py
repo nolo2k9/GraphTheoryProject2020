@@ -4,16 +4,14 @@
 # Author: Keith Nolan
 
 # === classes ===
-
 '''Classes used in thompsons construction'''
 
 
 class State:
-
-    '''Every state has 0,1 or 2 edges from it'''
-
-    edges = []
-    label = None
+    """
+    A state with one or two labels, all edges are labeled by a label
+    Every state has 0,1 or 2 edges from it
+    """
 
     def __init__(self, edges=[], label=None):
         self.edges = edges
@@ -22,16 +20,11 @@ class State:
 
 class Fragment:
 
-    '''Start State of NFA fragment '''
-
-    start = None
-    accept = None
-
-    # Constructor for class
-
+    # Constructor for Fragment class
     def __init__(self, start, accept):
+        # start state of nfa fragment
         self.start = start
-
+        # accept state of nfa fragment
         self.accept = accept
 
 
@@ -40,26 +33,24 @@ class Fragment:
 # convert infix to postfix
 
 def shunt(infix):
-
+    """Return the infix regular expression in postfix notation"""
     # convert input to list
-
     infix = list(infix)[::-1]
 
     # operator list
-
     op_stack = []
 
     # output list
-
     postfix = []
 
+    # precedence of the operators
     prec = {
         '*': 100,
         '.': 80,
         '|': 60,
         ')': 40,
         '(': 20,
-        }
+    }
 
     # loop through input one character at a time
 
@@ -67,30 +58,24 @@ def shunt(infix):
         c = infix.pop()
 
         # decide logic based on character
-
         if c == '(':
-
             op_stack.append(c)
         elif c == ')':
 
             # pop op_stackory stack until we find an opening bracket
-
             while op_stack[-1] != '(':
                 postfix.append(op_stack.pop())
             op_stack.pop()
         elif c in prec:
 
-       # if c is contained in prec
-
+           # if c is contained in prec
             while op_stack and prec[c] < prec[op_stack[-1]]:
                 postfix.append(op_stack.pop())
 
             # if c is an operator or bracket
-
             op_stack.append(c)
         else:
-
-             # else if its someting else
+            # else if its someting else
             # add to postfix
 
             postfix.append(c)
@@ -106,9 +91,12 @@ def shunt(infix):
 
 
 def compile(infix):
+    """Return an nfa fragment representing the infix regular expression"""
+    # Covert infix notation to postfix
     postfix = shunt(infix)
+    # make postfix a stack of characters
     postfix = list(postfix)[::-1]
-
+    # a stack for nfa fragments
     nfa_stack = []
 
     while postfix:
@@ -121,10 +109,11 @@ def compile(infix):
             frag2 = nfa_stack.pop()
 
             # point frag2's accept state to frag1 start state
-
             frag2.accept.edges.append(frag1.start)
-
-            newFrag = Fragment(frag2.start, frag1.accept)
+            #The new start state is frag2's
+            start = frag2.start
+            #The new accept state is frag1's
+            accept = frag1.accept
         elif c == '|':
 
             # pop 2 fragments off the stack
@@ -141,10 +130,6 @@ def compile(infix):
 
             frag2.accept.edges.append(accept)
             frag1.accept.edges.append(accept)
-
-            # new instance of fragment to represent NFA
-
-            newFrag = Fragment(start, accept)
         elif c == '*':
 
             # pop a single fragment off the stack
@@ -159,17 +144,14 @@ def compile(infix):
             # point the arrows
 
             frag.accept.edges = [frag.start, accept]
-
-            # create a new instance of Fragment to represent NFA
-
-            newFrag = Fragment(start, accept)
         else:
 
             accept = State()
             start = State(label=c, edges=[accept])
+        # create a new instance of Fragment to represent NFA
 
-            newFrag = Fragment(start, accept)
-
+        newFrag = Fragment(start, accept)
+        #push the new nfa to the nfa stack
         nfa_stack.append(newFrag)
 
     return nfa_stack.pop()
@@ -241,7 +223,16 @@ def match(regular_ex, s):
     return nfa.accept in current
 
 
-print (match("a.b|b*", "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"))
+if __name__ == "__main__":
+    tests =[
+        ["a.b|b*", "bbbbbbbb", True],
+        ["a.b|b*", "bbx", False],
+        ["a.b", "ab", True],
+        ["b**", "b", True],
+         ["b*", "", True],
+    ]
+   
+    for test in tests:
 
-
-			
+      assert match(test[0], test[1]) == test[2],test[0] + ("should" if test[2] else "should not") + "match" + test[1]
+   
