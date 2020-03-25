@@ -1,6 +1,12 @@
 # Author: Keith Nolan
-#run the regx file 
+#run the regex file 
 #import the regex script
 import regex
 
-print (regex.match("a.b|b*", "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"))
+#https://www.geeksforgeeks.org/taking-input-in-python/
+expression = input ("Enter expression :") 
+print("Expression entered: " + expression) 
+name1 = input("Enter string : ") 
+print("String entered  : " + name1) 
+
+print (regex.match(expression, name1))
