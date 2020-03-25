@@ -219,20 +219,6 @@ def match(regular_ex, s):
                     # Add the state at the end of the arrow to current
 
                     follows(state.edges[0], current)
-
+    #return results
     return nfa.accept in current
 
-
-if __name__ == "__main__":
-    tests =[
-        ["a.b|b*", "bbbbbbbb", True],
-        ["a.b|b*", "bbx", False],
-        ["a.b", "ab", True],
-        ["b**", "b", True],
-         ["b*", "", True],
-    ]
-   
-    for test in tests:
-
-      assert match(test[0], test[1]) == test[2],test[0] + ("should" if test[2] else "should not") + "match" + test[1]
-   
