@@ -22,3 +22,4 @@ for test in tests:
     assert regex.match(test[0], test[1]) == test[2],test[0] + ("should " if test[2] else "should not ") + " match " + test[1]
     #Printing out results
     print(regex.match(test[0], test[1]) == test[2],test[0] + (" should " if test[2] else " should not ") + " match " + test[1])
+
