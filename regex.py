@@ -9,7 +9,7 @@
 
 class State:
     """
-    A state with one or two labels, all edges are labeled by a label
+    A state with one or two edges, all edges are labeled by a label
     Every state has 0,1 or 2 edges from it
     """
 
@@ -19,10 +19,10 @@ class State:
 
 
 class Fragment:
-
+    """An nfa fragment with a start state and an accept state"""
     # Constructor for Fragment class
     def __init__(self, start, accept):
-        # start state of nfa fragment
+        # start state of an nfa fragment
         self.start = start
         # accept state of nfa fragment
         self.accept = accept
@@ -158,7 +158,7 @@ def compile(infix):
 
 
 def follows(state, current):
-
+    """Add a state to a set, follow all of the epsilon arrows"""
     # only do something when we haven't already seen the state
 
     if state not in current:
@@ -181,17 +181,18 @@ def follows(state, current):
 
 
 def match(regular_ex, s):
-    '''
-    nfa = non deterministic finite automoton
-    compile
-    will give us the nfa that does what the regular expression is meant to do
-    '''
+    """
+    Returns true if the regular expression (Regex) fully matches the enetered string s
+    It otherwise returns false.
+    """
 
+    #Compile the regular expression into an nfa
     nfa = compile(regular_ex)
 
     # Try to match the regular expression with the string s
-
+    #current set of states
     current = set()
+    #Add the first state and follow all of the e arrows
     follows(nfa.start, current)
 
     # Previous set of states
