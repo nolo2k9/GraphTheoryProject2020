@@ -67,9 +67,9 @@ elif choice =='B' or choice =='b':
 
  while True:
     #list of premade expressions
-    exprList = ["a.b*","a.b","b","a", "a*", "b*", "b**"]
+    exprList = ["a.b*","a.b","b","a", "a*", "b*", "b**", "a.b.b.c*", "a.c","c" ]
     #list of premade strings
-    strList = ["bbbbbbbbbbbbbbb", "ab","a","b", "aaaaaaaaaaaaaaaaaaaa"]
+    strList = ["bbbbbbbbbbbbbbb", "ab","a","b", "aaaaaaaaaaaaaaaaaaaa", "abc", "ac", "c"]
     #assigning a variable to a random string in the list using random.choice()
     expression = random.choice(exprList)
     #assigning a variable to a random string in the list using random.choice()

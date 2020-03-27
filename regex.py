@@ -8,14 +8,14 @@
 
 
 class State:
-    """
-    A state with one or two edges, all edges are labeled by a label
-    Every state has 0,1 or 2 edges from it
-    """
+  """A state with one or two edges, all edges labelled by label."""
+  # Constructor.
+  def __init__(self, label=None, edges=None):
+    # Every state has 0, 1, or 2 edges from it.
+    self.edges = edges if edges else []
+    # Label for the arrows. None means epsilon.
+    self.label = label
 
-    def __init__(self, edges=[], label=None):
-        self.edges = edges
-        self.label = label
 
 
 class Fragment:
