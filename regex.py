@@ -9,7 +9,7 @@
 
 class State:
   """A state with one or two edges, all edges labelled by label."""
-  # Constructor.
+  # Constructor for State class
   def __init__(self, label=None, edges=None):
     # Every state has 0, 1, or 2 edges from it.
     self.edges = edges if edges else []

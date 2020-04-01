@@ -127,4 +127,6 @@ Similarly, if you want to run the test script created for this project execute t
 
 **POP() definition**
 ```https://www.geeksforgeeks.org/python-list-pop/```
+**Regex Parsing thompsons construction**
+```https://xysun.github.io/posts/regex-parsing-thompsons-algorithm.html```
 
