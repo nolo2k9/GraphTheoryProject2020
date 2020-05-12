@@ -7,67 +7,51 @@ import regex
 import string
 import random
 
-
-#Ask user if they want to use a pre-defined expression or enter their own
-print("A. Do you want to enter your own expression? (Press A) ")
-print("B. Do you want to use a prefixed expression? (Press B)")
-print("C. Do you need Help? (Press C)")
-
-#setting up input variable
-choice = input()
-#the the user choose A then this will happen
-if choice =='A' or choice =='a':
- #while true
- while True:
+def ownExpr():
+        #while true
+        while True:
+        
+            print("Do you want to enter an expression? ")
+            #if yes chosen the user can enter an expression
+            keepGoing = input("Press Y for Yes or N for No \n")
+            if keepGoing == 'y' or keepGoing == 'Y':
+                True
+            #if no chosen the loop will break
+            elif keepGoing == 'N' or keepGoing == 'n':
+                break
+            #if satisfactory key not entered the user will be "stuck" until they make a valid selection
+            else: 
+                stuck = True
+                while stuck:
+                    print("\n")
+                    print("==============================================")
+                    print("\n")
+                    print("Wrong selection entered!!! \n") 
+                    print("Do you want to enter another expression? \n")
+                    print("==============================================")
+                    keepGoing = input("Press y for yes or n for no \n")
+                    #if yes chosen the user will exit stuck loop and can enter a new expression
+                    if keepGoing == 'y' or keepGoing == 'Y':
+                        stuck = False
+                    #if no chosen the loop will break 
+                    elif keepGoing == 'N' or keepGoing == 'n':
+                        stuck = False
+                        
+                    else: 
+                        stuck = True
+            #if no chosen the loop will break           
+            if keepGoing == 'n' or keepGoing == 'N':
+                break
+            #variable to get value for expression
+            expression = input ("Enter expression : \n") 
+            print("Expression entered: " + expression + "\n") 
+            #variable to get value for string
+            stringinput= input("Enter string : \n" ) 
+            print("String entered  : " + stringinput + "\n") 
+            #print result
+            print (regex.match(expression, stringinput))
    
-    print("Do you want to enter an expression? ")
-    #if yes chosen the user can enter an expression
-    keepGoing = input("Press Y for Yes or N for No \n")
-    if keepGoing == 'y' or keepGoing == 'Y':
-        True
-    #if no chosen the loop will break
-    elif keepGoing == 'N' or keepGoing == 'n':
-        break
-    #if satisfactory key not entered the user will be "stuck" until they make a valid selection
-    else: 
-         stuck = True
-         while stuck:
-             print("\n")
-             print("==============================================")
-             print("\n")
-             print("Wrong selection entered!!! \n") 
-             print("Do you want to enter another expression? \n")
-             print("==============================================")
-             keepGoing = input("Press y for yes or n for no \n")
-              #if yes chosen the user will exit stuck loop and can enter a new expression
-             if keepGoing == 'y' or keepGoing == 'Y':
-                stuck = False
-             #if no chosen the loop will break 
-             elif keepGoing == 'N' or keepGoing == 'n':
-                stuck = False
-                
-             else: 
-                 stuck = True
-     #if no chosen the loop will break           
-    if keepGoing == 'n' or keepGoing == 'N':
-        break
-    #variable to get value for expression
-    expression = input ("Enter expression : \n") 
-    print("Expression entered: " + expression + "\n") 
-    #variable to get value for string
-    stringinput= input("Enter string : \n" ) 
-    print("String entered  : " + stringinput + "\n") 
-    #print result
-    print (regex.match(expression, stringinput))
-
-
-
-
-    '''
-    if b is chosen a random expression will be generated from the lists of expressions and strings
-    '''
-elif choice =='B' or choice =='b':
-
+def randExpr():
  while True:
     #list of premade expressions
     exprList = ["a.b*","a.b","b","a", "a*", "b*", "b**", "a.b.b.c*", "a.c","c" ]
@@ -101,7 +85,6 @@ elif choice =='B' or choice =='b':
 
     else: 
          stuck = True
-         count = 1
          while stuck:
              print("\n")
              print("==============================================")
@@ -119,46 +102,27 @@ elif choice =='B' or choice =='b':
                  stuck = True
     if keepGoing == 'n' or keepGoing == 'N':
         break
+
+def helpMe():
+ print("To get help on running this program enter into command line (argument parser.py --help)")
+
+
+#Ask user if they want to use a pre-defined expression or enter their own
+print("A. Do you want to enter your own expression? (Press A) ")
+print("B. Do you want to use a prefixed expression? (Press B)")
+print("C. Do you need Help? (Press C)")
+
+#setting up input variable
+choice = input()
+#the the user choose A then this will happen
+if choice =='A' or choice =='a':
+    ownExpr()
+
+elif choice =='B' or choice =='b':
+    randExpr()
 
 elif choice =='c' or choice =='C':
-    #while true
- while True:
-   
-    print("Do you want to Help with operating this program? ")
-    #if yes chosen the user can enter an expression
-    keepGoing = input("Press Y for Yes or N for No \n")
-    if keepGoing == 'y' or keepGoing == 'Y':
-        True
-    #if no chosen the loop will break
-    elif keepGoing == 'N' or keepGoing == 'n':
-        break
-    #if satisfactory key not entered the user will be "stuck" until they make a valid selection
-    else: 
-         stuck = True
-         while stuck:
-             print("\n")
-             print("==============================================")
-             print("\n")
-             print("Wrong selection entered!!! \n") 
-             print("Do you want to enter another expression? \n")
-             print("==============================================")
-             keepGoing = input("Press y for yes or n for no \n")
-              #if yes chosen the user will exit stuck loop and can enter a new expression
-             if keepGoing == 'y' or keepGoing == 'Y':
-                stuck = False
-             #if no chosen the loop will break 
-             elif keepGoing == 'N' or keepGoing == 'n':
-                stuck = False
-                
-             else: 
-                 stuck = True
-     #if no chosen the loop will break           
-    if keepGoing == 'n' or keepGoing == 'N':
-        break
-
-    print("To get help on running this program enter into command line (argumentParser.py --help")
-    break
-
+    helpMe()
 #Resources used
 """
 code for taking input found on found on: 
