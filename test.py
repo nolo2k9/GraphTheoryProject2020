@@ -1,4 +1,5 @@
 import regex 
+import unittest
 
 '''
 Special variable understood by python, basically asks is this file being ran directly by python or being imported
@@ -13,6 +14,11 @@ if __name__ == "__main__":
             ["b*", "ababa", False],
             ["b**", "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", True],
         ]
+    
+
+
+    
+   
 #for loop to run tests
 for test in tests:
     '''
@@ -22,4 +28,10 @@ for test in tests:
     assert regex.match(test[0], test[1]) == test[2],test[0] + ("should " if test[2] else "should not ") + " match " + test[1]
     #Printing out results
     print(regex.match(test[0], test[1]) == test[2],test[0] + (" should " if test[2] else " should not ") + " match " + test[1])
-    
+
+
+
+
+
+
+  

@@ -7,9 +7,12 @@ import regex
 import string
 import random
 
+
 #Ask user if they want to use a pre-defined expression or enter their own
 print("A. Do you want to enter your own expression? (Press A) ")
 print("B. Do you want to use a prefixed expression? (Press B)")
+print("C. Do you need Help? (Press C)")
+
 #setting up input variable
 choice = input()
 #the the user choose A then this will happen
@@ -117,8 +120,44 @@ elif choice =='B' or choice =='b':
     if keepGoing == 'n' or keepGoing == 'N':
         break
 
+elif choice =='c' or choice =='C':
+    #while true
+ while True:
+   
+    print("Do you want to Help with operating this program? ")
+    #if yes chosen the user can enter an expression
+    keepGoing = input("Press Y for Yes or N for No \n")
+    if keepGoing == 'y' or keepGoing == 'Y':
+        True
+    #if no chosen the loop will break
+    elif keepGoing == 'N' or keepGoing == 'n':
+        break
+    #if satisfactory key not entered the user will be "stuck" until they make a valid selection
+    else: 
+         stuck = True
+         while stuck:
+             print("\n")
+             print("==============================================")
+             print("\n")
+             print("Wrong selection entered!!! \n") 
+             print("Do you want to enter another expression? \n")
+             print("==============================================")
+             keepGoing = input("Press y for yes or n for no \n")
+              #if yes chosen the user will exit stuck loop and can enter a new expression
+             if keepGoing == 'y' or keepGoing == 'Y':
+                stuck = False
+             #if no chosen the loop will break 
+             elif keepGoing == 'N' or keepGoing == 'n':
+                stuck = False
+                
+             else: 
+                 stuck = True
+     #if no chosen the loop will break           
+    if keepGoing == 'n' or keepGoing == 'N':
+        break
 
-
+    print("To get help on running this program enter into command line (argumentParser.py --help")
+    break
 
 #Resources used
 """
