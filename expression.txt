@@ -1,0 +1,6 @@
+****************************
+The result of this regular expression 
+a.b.c
+123
+False
+****************************

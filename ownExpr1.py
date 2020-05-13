@@ -4,14 +4,13 @@ import regex
 
 def main():
     keepGoing = True
+    
     while keepGoing:
-
         parser = argparse.ArgumentParser()
-        parser.add_argument(
-            "own", help="Enter your own expression and comparable string", type=str)
+        parser.add_argument("own", help="Enter your own expression and comparable string", type=str)
+        parser.add_argument("-o","--output", help="Output the results of your expression to file", action = "store_true")
 
         print("******************************************************************")
-        print("Please enter an expression and a string to compare it to.\n")
         print("Do you want to enter in an expression and string?\n")
         # if yes chosen the user can enter an expression
         keepGoing = input("Press Y for Yes or N for No \n")
@@ -57,10 +56,20 @@ def main():
         print("\n")
         print("String entered  : " + stringinput + "\n")
         print("Your entered expression is: ")
+        output = regex.match(expression, stringinput)
         print(regex.match(expression, stringinput))
         print("******************************************************************\n")
-    args = parser.parse_args()
-    print(args.own)
+       
+        args = parser.parse_args()
+        if args.output:
+            file = open("expression.txt", "a")
+            file.write(str("****************************") + '\n')
+            file.write("The result of this regular expression \n")
+            file.write(str(expression) + '\n')
+            file.write(str(stringinput) + '\n')
+            file.write(str(output) + '\n')
+            file.write(str("****************************") + '\n')
+        print(args.own)
 
 
 if __name__ == "__main__":
