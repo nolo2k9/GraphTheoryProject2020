@@ -9,14 +9,26 @@ import random
 
 def ownExpr():
     print("**********************************************************")
-    print("To enter in your own regular expression and string \n")
-    print(" Please enter the following into the cmd prompt: \n")
+    print("(A).")
+    print("-To enter in your own regular expression and string")
+    print("Please enter the following into the cmd prompt: ")
     print("python ownExpr.py own \n")
-    print("If you want to enter a regular expression and have our system print it to file ")
-    print("Please enter the following into the cmd prompt: \n")
+    print("(B).")
+    print("-If you want to enter a regular expression and have our system print it to file ")
+    print("Please enter the following into the cmd prompt: ")
     print("python ownExpr.py own --o \n")
-    print("If you require help on running this program")
-    print("Please enter the following into the cmd prompt: \n")
+    print("(C).")
+    print("-If you want to enter a regular expression and include your name with output to file")
+    print("Please enter the following into the cmd prompt: ")
+    print("python ownExpr.py own --o --name (your Name)")
+    print("Default name is Borris \n")
+    print("(D).")
+    print("-If you require help")
+    print("Please enter the following into the cmd prompt: ")
+    print("python ownExpr.py --h \n")
+    print("(E).")
+    print("-If you require help on running this program")
+    print("Please enter the following into the cmd prompt: ")
     print("python help.py --help \n")
     print("**********************************************************")
       
@@ -91,4 +103,10 @@ https://docs.python.org/3/library/argparse.html
 
 How to save to file in python 
 https://www.geeksforgeeks.org/reading-writing-text-files-python/
+
+How to set default values to a name command line argument 
+https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-specified-value
+
+Name command line argument 
+https://www.pyimagesearch.com/2018/03/12/python-argparse-command-line-arguments/
 """

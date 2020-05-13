@@ -6,7 +6,8 @@ import random
 def main():
     keepGoing = True
     while keepGoing:
-        parser = argparse.ArgumentParser()
+        parser = argparse.ArgumentParser(
+            description='Generate random regular expressions')
         parser.add_argument(
             "r", help="Generate a random expression from a bank of pre-defined expressions and string inputs", type=str)
         parser.add_argument(

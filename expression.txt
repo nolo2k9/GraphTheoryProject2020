@@ -28,3 +28,39 @@ a.b.c
 abc
 True
 ****************************
+The result of this regular expression 
+a.b.c
+abc
+True
+****************************
+The result of this regular expression 
+a.b.c.d
+abcd
+True
+****************************
+The result of this regular expression 
+a.b.c.d.e.f
+abcdef
+True
+****************************
+The result of this regular expression 
+The result of this regular expression 
+a.b.d.f.e.g
+abc
+False
+****************************
+The result of this regular expression 
+a.b.c
+bvc
+False
+****************************
+The result of this regular expression 
+a.b.c
+abc
+True
+****************************
+The result of this regular expression 
+nbv
+vcvc
+False
+****************************
