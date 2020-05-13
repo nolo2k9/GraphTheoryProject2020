@@ -4,11 +4,13 @@ import regex
 
 def main():
     keepGoing = True
-    
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "own", help="Enter your own expression and comparable string", type=str)
+    parser.add_argument(
+        "-o", "--output", help="Output the results of your expression to file", action="store_true")
+
     while keepGoing:
-        parser = argparse.ArgumentParser()
-        parser.add_argument("own", help="Enter your own expression and comparable string", type=str)
-        parser.add_argument("-o","--output", help="Output the results of your expression to file", action = "store_true")
 
         print("******************************************************************")
         print("Do you want to enter in an expression and string?\n")
@@ -20,30 +22,34 @@ def main():
         elif keepGoing == 'N' or keepGoing == 'n':
             print("\n")
             print("==============================================")
-            print("Good bye, Thanks for checking out this program!!!! \n")
+            print("If you opted to print your regular expression to file. \n")
+            print(
+                "In the current directory you are in, type the following into the cmd prompt: \n")
+            print("On Mac or Linux: (ls) then (cd expression.txt) then (ls) \n")
+            print("On Windows: (dir) then (cd expression.txt) then (ls) \n")
+            print("Good-bye, Thanks for checking out this program!!!! \n")
             keepGoing = False
             break
-        else: 
+        else:
             stuck = True
             while stuck:
                 print("\n")
                 print("==============================================")
                 print("\n")
-                print("Wrong selection entered!!! \n") 
+                print("Wrong selection entered!!! \n")
                 print("Do you want to enter another expression? \n")
                 print("==============================================")
                 keepGoing = input("Press y for yes or n for no \n")
-                #if yes chosen the user will exit stuck loop and can enter a new expression
+                # if yes chosen the user will exit stuck loop and can enter a new expression
                 if keepGoing == 'y' or keepGoing == 'Y':
                     stuck = False
-                #if no chosen the loop will break 
+                # if no chosen the loop will break
                 elif keepGoing == 'N' or keepGoing == 'n':
                     print("\n")
                     print("==============================================")
-                    print("Good bye, Thanks for checking out this program!!!!\n") 
+                    print("Good-bye, Thanks for checking out this program!!!!\n")
                     stuck = False
-                        
-                else: 
+                else:
                     stuck = True
         print("\n")
         print("******************************************************************")
@@ -59,19 +65,17 @@ def main():
         output = regex.match(expression, stringinput)
         print(regex.match(expression, stringinput))
         print("******************************************************************\n")
-       
-        args = parser.parse_args()
-        if args.output:
-            file = open("expression.txt", "a")
-            file.write(str("****************************") + '\n')
-            file.write("The result of this regular expression \n")
-            file.write(str(expression) + '\n')
-            file.write(str(stringinput) + '\n')
-            file.write(str(output) + '\n')
-            file.write(str("****************************") + '\n')
-        print(args.own)
+
+    args = parser.parse_args()
+    if args.output:
+        file = open("expression.txt", "a")
+        file.write("The result of this regular expression \n")
+        file.write(str(expression) + '\n')
+        file.write(str(stringinput) + '\n')
+        file.write(str(output) + '\n')
+        file.write(str("****************************") + '\n')
+    print(args.own)
 
 
 if __name__ == "__main__":
     main()
-

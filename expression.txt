@@ -1,6 +1,30 @@
+The result of this random regular expression 
+a.b.b.c*
+a
+False
+****************************
+The result of this random regular expression 
+b*
+ab
+False
+****************************
+The result of this random regular expression 
+c
+c
+True
+****************************
+The result of this random regular expression 
+b**
+a
+False
+****************************
+The result of this random regular expression 
+a*
+aaaaaaaaaaaaaaaaaaaa
+True
 ****************************
 The result of this regular expression 
 a.b.c
-123
-False
+abc
+True
 ****************************
