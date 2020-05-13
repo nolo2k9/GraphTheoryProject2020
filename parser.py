@@ -18,6 +18,9 @@ def ownExpr():
                 True
             #if no chosen the loop will break
             elif keepGoing == 'N' or keepGoing == 'n':
+                print("\n")
+                print("==============================================")
+                print("Good bye, Thanks for checking out this program!!!! \n") 
                 break
             #if satisfactory key not entered the user will be "stuck" until they make a valid selection
             else: 
@@ -35,6 +38,9 @@ def ownExpr():
                         stuck = False
                     #if no chosen the loop will break 
                     elif keepGoing == 'N' or keepGoing == 'n':
+                        print("\n")
+                        print("==============================================")
+                        print("Good bye, Thanks for checking out this program!!!!\n") 
                         stuck = False
                         
                     else: 
@@ -63,6 +69,9 @@ def randExpr():
     string1 = random.choice(strList)
     print("\n")
     print("========================================================")
+    print("A random expression and string have been chosen" )
+    print("\n")
+    print("========================================================")
     #Output contents of expression variable
     print("The random expression chosen was: " + expression + "\n")
     #Output contents of string1 variable
@@ -81,6 +90,9 @@ def randExpr():
         continue
 
     elif  choice2 == 'n' or choice2 == 'N':
+         print("\n")
+         print("==============================================")
+         print("Good bye, Thanks for checking out this program!!!! \n") 
          break
 
     else: 
@@ -101,28 +113,43 @@ def randExpr():
              else: 
                  stuck = True
     if keepGoing == 'n' or keepGoing == 'N':
+        print("\n")
+        print("==============================================")
+        print("Good bye, Thanks for checking out this program!!!! \n") 
         break
 
 def helpMe():
- print("To get help on running this program enter into command line (argument parser.py --help)")
+ print("To get help on running this program enter into command line (help.py --help)")
+
+while True:
+    #Ask user if they want to use a pre-defined expression or enter their own
+    print("A. Do you want to enter your own expression? (Press A) ")
+    print("B. Do you want to use a prefixed expression? (Press B)")
+    print("C. Do you need Help? (Press C)")
+
+    #setting up input variable
+    choice = input()
+    #the the user choose A then this will happen
+    if choice =='A' or choice =='a':
+        ownExpr()
+        break
+
+    elif choice =='B' or choice =='b':
+        randExpr()
+        break
+
+    elif choice =='c' or choice =='C':
+        helpMe()
+        break
+
+    if choice != 'a' or choice !='A' or choice != 'B' or choice !='b' or choice != 'c' or choice !='C':
+        print("**********************************************************")
+        print("\n")
+        print("Invalid selection entered, Please try again")
+        print("**********************************************************")
+        print("\n")
 
 
-#Ask user if they want to use a pre-defined expression or enter their own
-print("A. Do you want to enter your own expression? (Press A) ")
-print("B. Do you want to use a prefixed expression? (Press B)")
-print("C. Do you need Help? (Press C)")
-
-#setting up input variable
-choice = input()
-#the the user choose A then this will happen
-if choice =='A' or choice =='a':
-    ownExpr()
-
-elif choice =='B' or choice =='b':
-    randExpr()
-
-elif choice =='c' or choice =='C':
-    helpMe()
 #Resources used
 """
 code for taking input found on found on: 
