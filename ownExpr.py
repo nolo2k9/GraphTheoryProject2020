@@ -3,6 +3,7 @@ import regex
 
 
 def main():
+    
     keepGoing = True
     parser = argparse.ArgumentParser(
         description='Create your own regular expressions')

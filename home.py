@@ -92,7 +92,7 @@ while True:
         print("Good-bye, Thanks for checking out this program!!!!\n")
         break
 
-    if choice != 'a' or choice !='A' or choice != 'B' or choice !='b' or choice != 'c' or choice !='C' or choice != 'e' or choice !='E':
+    if choice != 'a' or choice !='b' or choice != 'c' or choice != 'e'.casefold():
         print("**********************************************************")
         print("\n")
         print("Invalid selection entered, Please try again")
@@ -102,6 +102,7 @@ while True:
 
 #Resources used
 """
+
 code for taking input found on found on: 
 https://www.geeksforgeeks.org/taking-input-in-python/
 
@@ -122,4 +123,7 @@ https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-sp
 
 Name command line argument 
 https://www.pyimagesearch.com/2018/03/12/python-argparse-command-line-arguments/
+
+casefold()
+https://www.programiz.com/python-programming/methods/string/casefold
 """

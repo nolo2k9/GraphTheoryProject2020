@@ -4,6 +4,7 @@ import random
 
 
 def main():
+
     keepGoing = True
     parser = argparse.ArgumentParser(
             description='Generate random regular expressions')
