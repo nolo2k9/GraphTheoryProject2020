@@ -34,28 +34,41 @@ def ownExpr():
       
 def randExpr():
     print("**********************************************************")
-    print("To recieve a randomly generated regular expression and string \n")
-    print(" Please enter the following into the cmd prompt: \n")
-    print("python randExpr.py -r \n")
-    print("If you want to recieve a regualr expression and have our system print it to file ")
-    print("Please enter the following into the cmd prompt: \n")
-    print("python ownExpr.py r --o \n")
-    print("If you need help on running this program")
-    print("Please enter the following into the cmd prompt: \n")
-    print("python help.py \n")
+    print("(A).")
+    print("-To generate a random regular expression and string")
+    print("Please enter the following into the cmd prompt: ")
+    print("python randExpr.py rand \n")
+    print("(B).")
+    print("-If you want to generate random regular expressions and have our system print them to file ")
+    print("Please enter the following into the cmd prompt: ")
+    print("randExpr.py rand --o \n")
+    print("(C).")
+    print("-If you want to generate random regular expressions and include your name and output to file")
+    print("Please enter the following into the cmd prompt: ")
+    print("python randExpr.py rand --o --name (Your name)")
+    print("Default name is Borris \n")
+    print("(D).")
+    print("-If you require help")
+    print("Please enter the following into the cmd prompt: ")
+    print("python randExpr.py --h \n")
+    print("(E).")
+    print("-If you require help on running this program")
+    print("Please enter the following into the cmd prompt: ")
+    print("python help.py --help \n")
     print("**********************************************************")
  
 
 def helpMe():
     print("To get help on running this program enter into command line (python help.py --help)")
 
+print("**********************************************************")
+print(" Welcome to this regular expression engine!!!!!! \n")
 while True:
     #Ask user if they want to use a pre-defined expression or enter their own
-    print("**********************************************************")
-    print(" Welcome to this regular expression engine!!!!!! \n")
+   
     print(" Please choose from the following options: \n")
     print("A. Do you want to enter your own expression? (Press A) ")
-    print("B. Do you want to use a prefixed expression? (Press B)")
+    print("B. Do you want to generate a random expression? (Press B)")
     print("C. Do you need Help? (Press C)")
     print("D. Do you want to exit this application? (Press E)")
 

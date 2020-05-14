@@ -6,23 +6,34 @@ def main():
     keepGoing = True
     parser = argparse.ArgumentParser(
         description='Create your own regular expressions')
+
     parser.add_argument(
         "own", help="Enter your own expression and comparable string", type=str)
+
     parser.add_argument(
         "-o", "--output", help="Output the results of your expression to file", action="store_true")
+
     parser.add_argument("-n", "--name", nargs='?', type=str,
                         help="name of the user", default='Borris')
+
+    print("\n")
+    print("***************************** WELCOME ***********************************")
     args = vars(parser.parse_args())
     print("Hi {}, Lets get started!".format(args["name"]))
+
     while keepGoing:
 
-        print("******************************************************************")
+        print("*************************************************************************")
+
         print("Do you want to enter in an expression and string, {}? \n".format(
             args["name"]))
+
         # if yes chosen the user can enter an expression
         keepGoing = input("Press Y for Yes or N for No \n")
+
         if keepGoing == 'y' or keepGoing == 'Y':
             keepGoing = True
+
          # if no chosen the loop will break
         elif keepGoing == 'N' or keepGoing == 'n':
             print("\n")
@@ -32,10 +43,10 @@ def main():
                 "In the current directory you are in, type the following into the cmd prompt: \n")
             print("On Mac or Linux: (ls) then (cd expression.txt) then (ls) \n")
             print("On Windows: (dir) then (cd expression.txt) then (ls) \n")
-            print(
-                "Good-bye {}, Thanks for checking out this program!!!! \n".format(args["name"]))
+            print("Good-bye {}, Thanks for checking out this program!!!! \n".format(args["name"]))
             keepGoing = False
             break
+
         else:
             stuck = True
             while stuck:
@@ -58,6 +69,7 @@ def main():
                     stuck = False
                 else:
                     stuck = True
+                    
         print("\n")
         print("******************************************************************")
         print("Please enter an expression and a string to compare it to.\n")

@@ -1,66 +1,116 @@
+
 The result of this random regular expression 
-a.b.b.c*
+a|c
+abc
+False
+****************************
+The result of this random regular expression 
+b*
+c
+False
+****************************
+The result of this random regular expression 
+c
+abc
+False
+****************************
+The result of this random regular expression 
+a|b
 a
+True
+****************************
+The result of this random regular expression 
+a|b|c
+c
+True
+****************************
+The result of this random regular expression 
+a|b
+b
+True
+****************************
+The result of this random regular expression 
+a
+aaaaaaaaaaaaaaaaaaaa
+False
+****************************
+The result of this random regular expression 
+b*
+b
+True
+****************************
+The result of this random regular expression 
+a
+bbbbbbbbbbbbbbb
+False
+****************************
+The result of this random regular expression 
+b
+a
+False
+****************************
+The result of this random regular expression 
+a.c
+ab
+False
+****************************
+The result of this random regular expression 
+a.c
+bbbbbbbbbbbbbbb
+False
+****************************
+The result of this random regular expression 
+b
+abc
+False
+****************************
+The result of this random regular expression 
+b
+ac
+False
+****************************
+The result of this random regular expression 
+a.c
+bcccccccc
+False
+****************************
+The result of this random regular expression 
+a.b*
+bbbbbbbbbbbbbbb
+False
+****************************
+The result of this random regular expression 
+b
+aaaaaaaaaaaaaaaaaaaa
+False
+****************************
+The result of this random regular expression 
+a.b*
+aaaaaaaaaaaaaaaaaaaa
+False
+****************************
+The result of this random regular expression 
+a
+a
+True
+****************************
+The result of this random regular expression 
+a|b
+bcccccccc
+False
+****************************
+The result of this random regular expression 
+a
+a
+True
+****************************
+The result of this random regular expression 
+a.b.c*
+c
 False
 ****************************
 The result of this random regular expression 
 b*
 ab
-False
-****************************
-The result of this random regular expression 
-c
-c
-True
-****************************
-The result of this random regular expression 
-b**
-a
-False
-****************************
-The result of this random regular expression 
-a*
-aaaaaaaaaaaaaaaaaaaa
-True
-****************************
-The result of this regular expression 
-a.b.c
-abc
-True
-****************************
-The result of this regular expression 
-a.b.c
-abc
-True
-****************************
-The result of this regular expression 
-a.b.c.d
-abcd
-True
-****************************
-The result of this regular expression 
-a.b.c.d.e.f
-abcdef
-True
-****************************
-The result of this regular expression 
-The result of this regular expression 
-a.b.d.f.e.g
-abc
-False
-****************************
-The result of this regular expression 
-a.b.c
-bvc
-False
-****************************
-The result of this regular expression 
-a.b.c
-abc
-True
-****************************
-The result of this regular expression 
-nbv
-vcvc
 False
 ****************************
