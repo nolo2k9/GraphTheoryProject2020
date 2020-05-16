@@ -1,32 +1,42 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+# Author: Keith Nolan
+
+#imports
 import argparse
 import regex
 import random
 
-
+#main method
 def main():
-
+    #keepgoing loop control variable
     keepGoing = True
+    #defining argparse to a variable + Description
     parser = argparse.ArgumentParser(
             description='Generate random regular expressions')
-
+     #adding an argument of type str name is own with help message
     parser.add_argument(
             "rand", help="Generate a random expression from a bank of pre-defined expressions and string inputs", type=str)
-
+     #adding an argument of type str name is output, shortcut of o with help message store value set to true
     parser.add_argument(
             "-o", "--output", help="Output the results of your expression to file", action="store_true")
-        
+    #adding an argument of type str name is name shortcut --n with help message and defualt name set to borris
     parser.add_argument("-n", "--name", nargs='?', type=str,
                         help="name of the user", default='Borris')
 
     print("\n")
     print("***************************** WELCOME ***********************************")
+     #setting up arguments to be parsed
     args = vars(parser.parse_args())
+    #print name
     print("Hi {}, Lets get started!\n".format(args["name"]))
-
+     #while keepgoing
     while keepGoing:
 
         print("*************************************************************************")
         args = vars(parser.parse_args())
+        #asking if user wants to enter in expression and string witht heir name or default name 
         print("Do you want to generate a random expression and string, {}? \n".format(args["name"]))
        
         # if yes chosen the user can enter an expression
@@ -49,6 +59,7 @@ def main():
             break
 
         else:
+            #if user makes wrong selection
             stuck = True
             while stuck:
                 print("\n")
@@ -71,11 +82,11 @@ def main():
                     stuck = True
 
         #list of premade expressions
-        exprList = ["a.b*", "b", "a","a|b","b|c","a|b|c",
-                    "b*", "b.c*", "a.b.c*", "a.c", "c","a|c"]
+        exprList = ["a.b*", "b", "a","a|b*","b*|c*","a|b|c","a*|b*|c*",
+                    "b*", "b.c*", "a.c", "c","a|c", "a*", "c*"]
 
         #list of premade strings
-        strList = ["bbbbbbbbbbbbbbb", "ab", "a", "b","abbbbbbbbbbb","bcccccccc",
+        strList = ["bbbbbbbbbbbbbbb", "ab", "a", "b","abbbbbbbbbbb","bcccccccc","bc",
                    "aaaaaaaaaaaaaaaaaaaa", "abc", "ac", "c","ccccccccccccccccccccccc","b","c","a"]
 
         # assigning a variable to a random string in the list using random.choice()
@@ -94,22 +105,32 @@ def main():
         print("The random expression chosen was: " + expression + "\n")
         # Output contents of string1 variable
         print("The random string choesen was: " + string1 + "\n")
+        #defining output for printing to file
         output = regex.match(expression, string1)
+        #setting users name to a variable 
+        name = ("{}").format(args["name"])
         # Output results
         print("output: ")
+        #print results
         print(regex.match(expression, string1))
-        print("========================================================")
+        print("========================================================\n")
 
         args = parser.parse_args()
+        #if user opts to have their expression output to file
         if args.output:
-            print("Printing your expressions and results to file........")
+            print("Printing your expressions and results to file........\n")
+            #open file 
             file = open("expression.txt", "a")
-            file.write("The result of this random regular expression \n")
+            #write name and following message
+            file.write(str(name +', The results of this randomly geneated regular expression are: ' + '\n'))
+            #write exprssion
             file.write(str(expression) + '\n')
+            #write their inputted string
             file.write(str(string1) + '\n')
+            #write output 
             file.write(str(output) + '\n')
             file.write(str("****************************") + '\n')
-        print(args.rand)
+       
 
 
 if __name__ == "__main__":

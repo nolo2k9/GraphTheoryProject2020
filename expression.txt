@@ -1,0 +1,495 @@
+Keith, The results of your regular expression are: 
+b*
+a
+False
+****************************
+Keith, The results of your regular expression are: 
+b
+c
+False
+****************************
+Keith, The results of your regular expression are: 
+a
+c
+False
+****************************
+Keith, The results of your regular expression are: 
+a|b|c
+bbbbbbbbbbbbbbb
+False
+****************************
+Keith, The results of your regular expression are: 
+a|b|c
+a
+True
+****************************
+Keith, The results of your regular expression are: 
+a.c
+bcccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|c
+bcccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*
+c
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b.c*
+bbbbbbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.c
+bbbbbbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.c
+abc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b|c
+ccccccccccccccccccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b.c*
+ccccccccccccccccccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a
+abbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b|c
+abbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b
+ccccccccccccccccccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.c
+b
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a
+ccccccccccccccccccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b.c*
+ab
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+c
+aaaaaaaaaaaaaaaaaaaa
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b.c*
+ac
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b*
+a
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b|c
+ccccccccccccccccccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*
+ab
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b.c*
+bcccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b*
+abbbbbbbbbbb
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b|c
+abbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*
+ccccccccccccccccccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+c
+b
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b
+bbbbbbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a
+b
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b*
+ab
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*
+ab
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b|c
+ac
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b|c
+c
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*
+abc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b.c*
+a
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b
+ac
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b.c*
+bbbbbbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b|c
+a
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b|c
+ccccccccccccccccccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*
+c
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b
+aaaaaaaaaaaaaaaaaaaa
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b.c*
+a
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b.c*
+b
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a
+ab
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b|c
+ac
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a
+aaaaaaaaaaaaaaaaaaaa
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b.c*
+ccccccccccccccccccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b.c*
+a
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|c
+ac
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b
+a
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|c
+c
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|c
+abc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b|c
+abbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b|c
+c
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b|c
+bcccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b|c
+abc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b
+c
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b|c
+bbbbbbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+c
+a
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*
+bbbbbbbbbbbbbbb
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.c
+ac
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+c
+b
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b
+bcccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b
+abc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.c
+ccccccccccccccccccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|c
+a
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a
+abc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a*
+abc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b|c
+b
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a*|b*|c*
+ac
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b.c*
+ab
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+c*
+c
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b.c*
+c
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b|c
+bcccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b.c*
+ab
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*
+bcccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b*
+bc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b
+bbbbbbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|c
+b
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*
+aaaaaaaaaaaaaaaaaaaa
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|c
+bc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b.c*
+c
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a*|b*|c*
+b
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b*
+ac
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a|b*
+aaaaaaaaaaaaaaaaaaaa
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a*|b*|c*
+a
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+c
+abc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+c*
+ab
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b.c*
+abbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a*
+ccccccccccccccccccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*
+a
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*|c*
+bc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.c
+abc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+b*|c*
+c
+True
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a
+bbbbbbbbbbbbbbb
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b.c*
+ccccccccccccccccccccccc
+False
+****************************
+Keith, The results of this randomly geneated regular expression are: 
+a.b.c*
+b
+False
+****************************
