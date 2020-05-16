@@ -1,11 +1,11 @@
 <h1>Introduction</h1>
-<h2>
+<h3>
 This repository contains a regular expression engine. Which is built using an algorithm called Thompsons construction. Thompsons construction is a method of transforming a regular expression into an equivalent NFA (Nondeterministic finite automata). A regular expression is entered in or generated followed by a string to compare to the regular expression. The application then outputs a True or False statement indicating whether the entered expression and comparable string is in fact a regular expression when executed together.
 I will now discuss the various files and features that are included in this application and explain how each of them work. 
 home.py
 The file home.py acts like a main menu or, in the context of a game or other application this would be the first screen you see upon opening the application. It acts as a guide to the user of the application on what they can do and how they can achieve the results they are looking for. The layout was developed with simplicity and ease of use in mind to allow any user to navigate the various features this application has to offer with ease and without having to feel like they have to spend a lot of time learning how to use it. 
 Upon running home.py the user is faced with the following options
-</h2>
+</h3>
 
 ![HomeScreen](images/home.JPG)
 
@@ -26,37 +26,37 @@ Finally pressing E will exit this menu and stop the program. This is because the
 The menu itself is designed simply each option for example (A) has a method that is fired upon pressing this button in either higher or lower case this is achieved using the casefold() method. Depending on what option is press depends on what method is fired. Any invalid selections will cause the loop to continue, where any correct options pressed will follow with a break from the loop and firing of the associated method. 
 The methods themselves just contain well laid out text informing the user of how to use the selected function and what commands to run to achieve their desired output or result. 
 
-ownExpr.py
+<h1>ownExpr.py</h1>
 This file contains features that enable the user to enter in their own regular expression and string to inform them if their entered data is a regular expression or not. It is built around command line arguments with each command enabling them to use different features.
 The command line tools are made available through a package called “argparse”. This package makes it easy to write command line interfaces. The command line arguments used for this class are own this allows you to enter in your own expressions and strings. There is also one called output with a shortcut of “-o” that enables you to print your expressions to a file called expression.txt and finally there is a command line tool to enable you to enter your name for a more personalized experience with his application. This is called name and has a shortcut of –n. 
 When these expressions are entered together into the command line after typing ownExpr.py own --o --n Keith for example it enables you to use these features in this program and allows you to use them, each can be used on their own as well. (With the exception of the own command which must be present)
 The program uses the input() method to take in the users input for both the regular expression and the comparable string and stores them both in a variable. These variables are then passed into the match function in the regex file by using regex.match(var1, var2) which then compares them and outputs a true or false statement. 
 When you have entered in your expression and string and got your result, you will be asked if you want to enter in another and depending on if you do or not the program will exit or keep going. When you do finish entering in your expressions the output is then parsed using the parser.parse_args() function If you opted to print your results to file a message is displayed telling you how you can access your file. 
 
-randExpr.py
+<h1>randExpr.py</h1>
 This file works much the same as ownExpr.py in terms of command line arguments and for the most part how it’s set up, but instead of entering in your own expressions and strings it randomly generates them from a list of pre-defined expressions and strings. To access this set of command line features you must enter randExpr.py rand -o --name Keith for example, with rand being the mandatory expression to use this file. These expressions and strings are stored in lists containing several different variations of regular expressions and strings to compare them against.
 Two variables are then set up and assigned to random.choice() which is a method from the random library. This will randomly choose a predefined string from each of these lists. Both variables are then passed into regex.match(var1, var2). 
 The subsequent actions are then the exact same as ownExpr.py You will be asked if you want to generate another expression or not, when you exit depending on if you opted to print your options to file you will be given details on how to access the file. 
 You can also access help command line arguments by typing in the name of either file with the –h argument. Example randExpr.py –h. This will bring up help tools on each argument. 
 
-help.py
+<h1>help.py</h1>
 This feature displays to the user information to help them run and understand the program on a higher level. While this is set up as a command line argument, there is no mandatory expression to use here. The user just has run help.py. This was a design decision which was made to make running this file as simple as possible. As it does not take any knowledge of command line arguments. 
 
-regex.py
+<h1>regex.py</h1>
 This file is the backbone of this application. This file takes in and compiles the regular expression and checks it to the string that has been entered to compare it against. It then outputs a true or false statement telling the user if it is or is not a regular expression. For a more detailed description of the classes, methods and features used in this file please see readme.md
 
-test.py
+<h1>test.py</h1>
 This contains a test class which implements the unit test package to carry out these tests. It was set up to test the output of the match function in the regex script. This was to ensure that the desired output was achieved each time the user entered an expression.
 
-Run
-
+<h1>Run</h1>
 This section describes how to download and run this application as well as how to download python. 
 Prerequisites 
 Please note this setup assumes that the reader has the GitHub functionality and visual studio code both installed on their machine. 
 Steps to download/clone this application
 Upon reaching my GitHub repository which is stored at: https://github.com/nolo2k9/GraphTheoryProject2020
 You will see a big green button on the far-right hand side of the screen which says, “clone or download”. After clicking this button, you will be able clone this repository. 
-Cloning repository
+
+<h2>Cloning repository</h2>
 Steps to download this repository on Mac and Windows. 
 To achieve this, copy the link by either pressing cntrl + c (Windows) or CMD + C (Macintosh) after highlighting the link or clicking on the clipboard icon.
 You can then open your command prompt by either clicking on a shortcut or start typing command prompt into your search bar on your Windows device or on MAC press CMD + Space bar then type terminal. Both methods will begin a search. 
@@ -66,7 +66,7 @@ git init - This will initialize GitHub
 Then type git clone https://github.com/nolo2k9/GraphTheoryProject2020
 You will then see a message informing you that this project is being cloned into a repository called GraphTheoryProject2020.
 You can then search for this project on your machine in the same way mentioned above on both Machines.
-Windows:
+<h2>Windows:</h2>
 Upon finding the file you can click into it at the top of the page you will see a file path like this. See below
 
 ![path](images/path.JPG)
@@ -75,17 +75,17 @@ If you click on this it will highlight it then simply type in cmd
 This will bring up the command prompt in this directory location. 
 You can then type python home.py to get started. 
 
-Macintosh
+<h2>Macintosh</h2>
 While still in the terminal type in:
 cd GraphTheoryProject2020
 This will change the directory to the directory of this project. 
 Then simply type python3 home.py to get started
 
-Download repository
+<h2>Download repository</h2>
 After clicking the big green button again, you can opt to download this zip of this project as well. 
 After downloading the zip file, you can unzip it and then follow the same steps provided above for each system.
 Installing Python
-Windows:
+<h2>Windows:</h2>
 Please check which type of operating system your computer is running before starting this procedure.
 To do this 
 Start typing system information into your search bar on your windows machine.
@@ -97,9 +97,9 @@ At the top of the page you will see latest Python 3 release
 Navigate to that page scroll down to the bottom of the page. Where you will see a section marked files.
 If you have a 64-bit operating system you can choose Windows x86-64 executable installer
 Otherwise if your system is a 32-bit computer you can choose Windows x86 executable installer
-
 Download the installer required for your system and run the installer.
-Macintosh
+
+<h2>Macintosh</h2>
 Open your browser
 Install homebrew- follow this link: https://brew.sh/
 Or just type the following into your terminal: 
@@ -107,13 +107,13 @@ Or just type the following into your terminal:
 Then in your terminal type: brew install python3
 This will install python on your Mac 
 
-Test
+<h1>Test</h1>
 This section describes how to run the tests that are incorporated with this project.
 In the project directory run the following in the command prompt.
 python test.py
 Running this command will in turn run the tests included in this project and the results and what is being tested will be outputted to the screen. 
 
-Algorithm 
+<h1>Algorithm</h1>
 This section describes the algorithm used in this project. The algorithm in question is Thompson’s construction. 
 About the algorithm
 This algorithm created by Ken Thompson is a method of transforming regular expressions into an equivalent NFA (Nondeterministic finite automata). To understand NFA’s we must first look at what a finite state machine is. This machine is an abstraction that has several states.  
@@ -128,7 +128,7 @@ As you can see with this example above. If the phone is powered off and the came
 Finite state machines can be presented by a sequence of commands that have or can be followed to reach a certain state. 
 State machines are deterministic. This means that if the starting state is known you should be able to predict the finish state when completed. There are no multiple or random choices, in the movement between states. Each finishing state can be predicted because there is exactly one finishing state. In other words, DFA’S have exactly one state that they can transition to when in any given state. A simple way would be to think of the word “deterministic” in deterministic finite automata would be that the outcome can be determined. 
 
-NFA’S
+<h2>NFA’S</h2>
 An NFA is the opposite to a DFA in every sense of the word, it does not obey the rules followed by DFA’S. It allows more than one possible outcome and when put on a large scale is unpredictable. If you start in one state you can stay in that state, or if the right conditions are met you can move to the next state and so on. Please see the diagram below
 
 ![ex2](images/example2.png)
@@ -168,7 +168,7 @@ E or the empty regular expression element.
 This just simply means empty. 
 Below I will show you an example of Thompsons construction using a diagram. 
 
-![thomp](images/Thomsons_construction.png)
+![thomp](images/Thomp.png)
 
 Using the examples given above we can work out the final state of this regular expression.
 The example given here is a.b|b* which we know means ab or b or multiple b’s
@@ -178,7 +178,7 @@ Both states will be accepted in this instance.
 The same methods/regular expressions can be applied to this application. Once you know and understand these rules you can utilize this program to its full potential. 
 
 
-References
+<h1>References</h1>
 
 Python with argparse
 http://zetcode.com/python/argparse/
