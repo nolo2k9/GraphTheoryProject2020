@@ -43,7 +43,7 @@ You can also access help command line arguments by typing in the name of either 
 This feature displays to the user information to help them run and understand the program on a higher level. While this is set up as a command line argument, there is no mandatory expression to use here. The user just has run **help.py**. This was a design decision which was made to make running this file as simple as possible. As it does not take any knowledge of command line arguments. 
 
 <h1>regex.py</h1>
-This file is the backbone of this application. This file takes in and compiles the regular expression and checks it to the string that has been entered to compare it against. It then outputs a true or false statement telling the user if it is or is not a regular expression. For a more detailed description of the classes, methods and features used in this file please see readme.md
+This file is the backbone of this application. This file takes in and compiles the regular expression and checks it to the string that has been entered to compare it against. It then outputs a true or false statement telling the user if it is or is not a regular expression. For a more detailed description of the classes, methods and features used in this file please see **readme.md**.
 
 <h1>test.py</h1>
 This contains a test class which implements the unit test package to carry out these tests. It was set up to test the output of the match function in the regex script. This was to ensure that the desired output was achieved each time the user entered an expression.
