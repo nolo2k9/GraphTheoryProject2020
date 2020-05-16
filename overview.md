@@ -18,5 +18,5 @@ The methods themselves just contain well laid out text informing the user of how
 
 ownExpr.py
 
-![](C:\Users\Keith\Desktop\home.jpg)
+
 
