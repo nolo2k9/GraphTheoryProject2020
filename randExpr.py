@@ -102,6 +102,7 @@ def main():
 
         args = parser.parse_args()
         if args.output:
+            print("Printing your expressions and results to file........")
             file = open("expression.txt", "a")
             file.write("The result of this random regular expression \n")
             file.write(str(expression) + '\n')

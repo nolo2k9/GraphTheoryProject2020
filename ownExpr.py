@@ -38,8 +38,8 @@ def main():
          # if no chosen the loop will break
         elif keepGoing == 'N' or keepGoing == 'n':
             print("\n")
-            print("==============================================")
-            print("If you opted to print your regular expression to file. \n")
+            print("===============================================================================")
+            print("{} you opted to print your regular expression to file. \n".format(args["name"]))
             print(
                 "In the current directory you are in, type the following into the cmd prompt: \n")
             print("On Mac or Linux: (ls) then (cd expression.txt) then (ls) \n")
@@ -82,19 +82,22 @@ def main():
         print("\n")
         print("String entered  : " + stringinput + "\n")
         print("Your entered expression is: ")
+        name = ("{}").format(args["name"])
         output = regex.match(expression, stringinput)
         print(regex.match(expression, stringinput))
         print("******************************************************************\n")
 
     args = parser.parse_args()
     if args.output:
+        print("Printing your expressions and results to file........")
         file = open("expression.txt", "a")
-        file.write("The result of this regular expression \n")
+        file.write(str(name +', The results of your regular expression are: ' + '\n'))
+        file.write("The results of your regular expression are \n")
         file.write(str(expression) + '\n')
         file.write(str(stringinput) + '\n')
         file.write(str(output) + '\n')
         file.write(str("****************************") + '\n')
-    print(args.own)
+    
 
 
 if __name__ == "__main__":
