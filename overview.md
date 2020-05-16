@@ -1,46 +1,46 @@
 <h1>Introduction</h1>
 
-This repository contains a regular expression engine. Which is built using an algorithm called Thompsons construction. Thompsons construction is a method of transforming a regular expression into an equivalent NFA (Nondeterministic finite automata). A regular expression is entered in or generated followed by a string to compare to the regular expression. The application then outputs a True or False statement indicating whether the entered expression and comparable string is in fact a regular expression when executed together.
+This repository contains a regular expression engine. Which is built using an algorithm called **Thompsons construction**. Thompsons construction is a method of transforming a **regular expression** into an equivalent **NFA (Nondeterministic finite automata)**. In this program an  expression is entered in by the user or generated randomly followed by a string to compare to the regular expression. The application then outputs a **True or False** statement indicating whether the entered expression and comparable string is in fact a regular expression when executed together.
 I will now discuss the various files and features that are included in this application and explain how each of them work. 
-home.py
-The file home.py acts like a main menu or, in the context of a game or other application this would be the first screen you see upon opening the application. It acts as a guide to the user of the application on what they can do and how they can achieve the results they are looking for. The layout was developed with simplicity and ease of use in mind to allow any user to navigate the various features this application has to offer with ease and without having to feel like they have to spend a lot of time learning how to use it. 
-Upon running home.py the user is faced with the following options
+<h1>home.py</h1>
+The file home.py acts like a main menu or, in the context of a game or other application this would be the first screen you see upon opening the application. It acts as a guide to the user of the application on what they can do and how they can achieve the results they are looking for. The layout was developed with simplicity and ease of use in mind to allow any user to navigate the various features this application has to offer with ease and without having felt like they had to spend a lot of time learning how to use it. 
+Upon running **home.py** the user is faced with the following options:
 
 
 ![HomeScreen](images/home.JPG)
 
-Each of these options is clearly laid out in an easy to understand manner with each selection bringing the user to a different part of the application or allowing them to exit the application. If for example the user presses A it will bring them to a new set of instructions informing them how they can enter in their own regular expressions.
+Each of these options is clearly laid out in an easy to understand manner with each selection bringing the user to a different part of the application or allowing them to exit the application. If for example the user presses **A** it will bring them to a new set of instructions informing them how they can enter in their own regular expressions.
 
 ![MainMenu1](images/a.JPG)
 
-Each clearly laid out instruction informs them of how they can achieve everything from simply entering in their own regular expression, entering their own expression and printing it to a file to entering their name to get a more personalized experience from using this program.
-If the user presses B when in this menu, they get a similar set of instructions but instead of options about entering in their own expressions it gives them options to execute a file where the system will generate random expressions and comparable strings for them. This was built with learning in mind so the user can get a better grasp of how regular expressions work, what expressions work with what strings and what does not work. When the user can visualize what is happening, I think it will help them understand more of how the whole process works.
+Each clearly laid out instruction informs them of how they can achieve everything from simply entering in their own expression, entering their own expression and printing it to a file to entering their name to get a more personalized experience from using this program.
+If the user presses **B** when in this menu, they get a similar set of instructions but instead of options about entering in their own expressions it gives them options to execute a file where the system will **generate random expressions** and comparable strings for them. This was built with **learning** in mind so the user can get a better grasp of how regular expressions work, what expressions work with what strings and what does not work. When the user can visualize what is happening, I think it will help them understand more of how the whole process works.
 
 ![MainMenu2](images/b.JPG)
 
-Pressing C in this main menu will instruct the user about how to get help running this application should they need it. Below is an image of what instructions are produced if C is press on this options menu.
+Pressing **C** in this main menu will instruct the user about how to get help running this application should they need it. Below is an image of what instructions are produced if C is press on this options menu.
 
 ![MainMenu2](images/c.JPG)
 
-Finally pressing E will exit this menu and stop the program. This is because the menu is built with a while loop. This was done to stop users entering in invalid options such as pressing x. This gives more control to the program and stops it from crashing if an invalid option is entered. 
-The menu itself is designed simply each option for example (A) has a method that is fired upon pressing this button in either higher or lower case this is achieved using the casefold() method. Depending on what option is press depends on what method is fired. Any invalid selections will cause the loop to continue, where any correct options pressed will follow with a break from the loop and firing of the associated method. 
+Finally pressing **E** will exit this menu and stop the program. This is because the menu is built with a while loop. This was done to stop users entering in invalid options such as pressing x. This gives more control to the program and stops it from crashing if an invalid option is entered. 
+The menu itself is designed simply each option for example **(A)** has a method that is fired upon pressing this button in either higher or lower case this is achieved using the **casefold()** method. Depending on what option is press depends on what method is fired. Any invalid selections will cause the loop to continue, where any correct options pressed will follow with a break from the loop and firing of the associated method. 
 The methods themselves just contain well laid out text informing the user of how to use the selected function and what commands to run to achieve their desired output or result. 
 
 <h1>ownExpr.py</h1>
-This file contains features that enable the user to enter in their own regular expression and string to inform them if their entered data is a regular expression or not. It is built around command line arguments with each command enabling them to use different features.
-The command line tools are made available through a package called “argparse”. This package makes it easy to write command line interfaces. The command line arguments used for this class are own this allows you to enter in your own expressions and strings. There is also one called output with a shortcut of “-o” that enables you to print your expressions to a file called expression.txt and finally there is a command line tool to enable you to enter your name for a more personalized experience with his application. This is called name and has a shortcut of –n. 
-When these expressions are entered together into the command line after typing ownExpr.py own --o --n Keith for example it enables you to use these features in this program and allows you to use them, each can be used on their own as well. (With the exception of the own command which must be present)
-The program uses the input() method to take in the users input for both the regular expression and the comparable string and stores them both in a variable. These variables are then passed into the match function in the regex file by using regex.match(var1, var2) which then compares them and outputs a true or false statement. 
-When you have entered in your expression and string and got your result, you will be asked if you want to enter in another and depending on if you do or not the program will exit or keep going. When you do finish entering in your expressions the output is then parsed using the parser.parse_args() function If you opted to print your results to file a message is displayed telling you how you can access your file. 
+This file contains features that enable the user to enter in their **own** regular expression and string to inform them if their entered data is a regular expression or not. It is built around **command line arguments** with each command enabling them to use different features.
+The command line tools are made available through a package called **“argparse”**. This package makes it easy to write command line interfaces. The command line arguments used for this class are **own** this allows you to enter in your own expressions and strings. There is also one called **output with a shortcut of “-o”** that enables you to print your expressions to a file called **expression.txt** and finally there is a command line tool to enable you to enter your name for a more personalized experience with his application. This is called name and has a shortcut of **–n**. 
+When these expressions are entered together into the command line after typing **python ownExpr.py own --o --n Keith** for example it enables you to use these features in this program, each can be used on their own as well. (With the exception of the own command which must be present)
+The program uses the **input()** method to take in the users input for both the regular expression and the comparable string and stores them both in a variable. These variables are then passed into the match function in the regex file by using **regex.match(var1, var2)** which then compares them and outputs a true or false statement. 
+When you have entered in your expression and string and got your result, you will be asked if you want to enter in another and depending on if you do or not the program will exit or keep going. When you do finish entering in your expressions the output is then parsed using the **parser.parse_args(**) function If you opted to print your results to file a message is displayed telling you how you can access your file. 
 
 <h1>randExpr.py</h1>
 This file works much the same as ownExpr.py in terms of command line arguments and for the most part how it’s set up, but instead of entering in your own expressions and strings it randomly generates them from a list of pre-defined expressions and strings. To access this set of command line features you must enter randExpr.py rand -o --name Keith for example, with rand being the mandatory expression to use this file. These expressions and strings are stored in lists containing several different variations of regular expressions and strings to compare them against.
-Two variables are then set up and assigned to random.choice() which is a method from the random library. This will randomly choose a predefined string from each of these lists. Both variables are then passed into regex.match(var1, var2). 
+Two variables are then set up and assigned to **random.choice()** which is a method from the random library. This will randomly choose a predefined string from each of these lists. Both variables are then passed into regex.match(var1, var2). 
 The subsequent actions are then the exact same as ownExpr.py You will be asked if you want to generate another expression or not, when you exit depending on if you opted to print your options to file you will be given details on how to access the file. 
-You can also access help command line arguments by typing in the name of either file with the –h argument. Example randExpr.py –h. This will bring up help tools on each argument. 
+You can also access help command line arguments by typing in the name of either file with the –h argument. Example **randExpr.py –h**. This will bring up help tools on each argument. 
 
 <h1>help.py</h1>
-This feature displays to the user information to help them run and understand the program on a higher level. While this is set up as a command line argument, there is no mandatory expression to use here. The user just has run help.py. This was a design decision which was made to make running this file as simple as possible. As it does not take any knowledge of command line arguments. 
+This feature displays to the user information to help them run and understand the program on a higher level. While this is set up as a command line argument, there is no mandatory expression to use here. The user just has run **help.py**. This was a design decision which was made to make running this file as simple as possible. As it does not take any knowledge of command line arguments. 
 
 <h1>regex.py</h1>
 This file is the backbone of this application. This file takes in and compiles the regular expression and checks it to the string that has been entered to compare it against. It then outputs a true or false statement telling the user if it is or is not a regular expression. For a more detailed description of the classes, methods and features used in this file please see readme.md
@@ -85,6 +85,7 @@ Then simply type python3 home.py to get started
 After clicking the big green button again, you can opt to download this zip of this project as well. 
 After downloading the zip file, you can unzip it and then follow the same steps provided above for each system.
 Installing Python
+
 <h4>Windows:</h4>
 Please check which type of operating system your computer is running before starting this procedure.
 To do this 
@@ -126,7 +127,7 @@ For arguments sake lets imagine the phone is turned on and the user moves to the
 
 As you can see with this example above. If the phone is powered off and the camera button is pressed nothing will happen because it has not yet reached its on state. Then to explain the state process. The phone starts off in the off state when it is powered on it moves to the on state. When the phone has been powered on it can then reach the camera state, then take photo, then view photo. These instructions or commands must be done in this order to reach the final state. It cannot be turned on and then off, it must complete all the steps until finished
 Finite state machines can be presented by a sequence of commands that have or can be followed to reach a certain state. 
-State machines are deterministic. This means that if the starting state is known you should be able to predict the finish state when completed. There are no multiple or random choices, in the movement between states. Each finishing state can be predicted because there is exactly one finishing state. In other words, DFA’S have exactly one state that they can transition to when in any given state. A simple way would be to think of the word “deterministic” in deterministic finite automata would be that the outcome can be determined. 
+State machines are deterministic. This means that if the starting state is known you should be able to predict the finish state when completed. There are no multiple or random choices, in the movement between states. Each finishing state can be predicted because there is exactly one finishing state. In other words, DFA’S have exactly one state that they can transition to when in any given state. A simple way would be to think of the word “deterministic” in deterministic finite automata would be that the outcome **can be determined**. 
 
 <h2>NFA’S</h2>
 An NFA is the opposite to a DFA in every sense of the word, it does not obey the rules followed by DFA’S. It allows more than one possible outcome and when put on a large scale is unpredictable. If you start in one state you can stay in that state, or if the right conditions are met you can move to the next state and so on. Please see the diagram below
@@ -139,32 +140,34 @@ Let us look at another example of how NFA’S work. Although this diagram is que
 
 ![dia](images/regular.png)
 
-Let us imagine a string of commands or inputs 0100101
+Let us imagine a string of commands or inputs **0100101**
 
 We begin from the start state, “off” and if we look at the first of the inputs 0. The action outlined for this state for the action 0 is to remain in the same off state. This is because the arrow is pointing to remain in the same state. The next number is 1 which points to the on state, so it moves to the next state which is “on”. The next 2 numbers are 0 with means the phone just remains on. The next command or input is a 1 which means we move to play music state, it then remains in this state because the command or input is 0. This happens until the input changes to 1 and which leads the state goes back to just being on. 
 This simple diagram helps us understand how to understand the behavior of NFA’S. This in turn will give us a greater understanding to how Thompsons construction works.
-Thompsons construction
+
+<h2>Thompsons construction</h2>
 The algorithm 
 To construct a non-deterministic finite automaton from a regular expression.
 The NFA will recognize the same language as the regular expression. 
 When trying to understand how this program works there are a few regular expression operators you must understand.
-The dot operator:
+
+**The dot operator**:
 (.)
 When this operator is used between two elements its means both elements together. 
 Example:
 A.B
 So, if you were to enter A.B the comparable string must be AB both inputs together this will return True. Anything else will return False.  
-OR operator:
+**OR operator**:
 (|)
 Or operator specifies that either will be accepted 
 A|B
 To return true on the above statement A will be an accept state likewise so will B
 (*)
-This star operator means many:
+**This star operator means many**:
 For A.B* an accept state will be ABBBBBBBBBBBB
 For A|C* an accept state will be either A or a single C or multiple c’s
 (E)
-E or the empty regular expression element. 
+**E** or the empty regular expression element. 
 This just simply means empty. 
 Below I will show you an example of Thompsons construction using a diagram. 
 
