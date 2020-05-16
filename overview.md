@@ -1,11 +1,11 @@
 <h1>Introduction</h1>
-<h3>
+
 This repository contains a regular expression engine. Which is built using an algorithm called Thompsons construction. Thompsons construction is a method of transforming a regular expression into an equivalent NFA (Nondeterministic finite automata). A regular expression is entered in or generated followed by a string to compare to the regular expression. The application then outputs a True or False statement indicating whether the entered expression and comparable string is in fact a regular expression when executed together.
 I will now discuss the various files and features that are included in this application and explain how each of them work. 
 home.py
 The file home.py acts like a main menu or, in the context of a game or other application this would be the first screen you see upon opening the application. It acts as a guide to the user of the application on what they can do and how they can achieve the results they are looking for. The layout was developed with simplicity and ease of use in mind to allow any user to navigate the various features this application has to offer with ease and without having to feel like they have to spend a lot of time learning how to use it. 
 Upon running home.py the user is faced with the following options
-</h3>
+
 
 ![HomeScreen](images/home.JPG)
 
@@ -66,7 +66,7 @@ git init - This will initialize GitHub
 Then type git clone https://github.com/nolo2k9/GraphTheoryProject2020
 You will then see a message informing you that this project is being cloned into a repository called GraphTheoryProject2020.
 You can then search for this project on your machine in the same way mentioned above on both Machines.
-<h2>Windows:</h2>
+<h4>Windows:</h4>
 Upon finding the file you can click into it at the top of the page you will see a file path like this. See below
 
 ![path](images/path.JPG)
@@ -75,7 +75,7 @@ If you click on this it will highlight it then simply type in cmd
 This will bring up the command prompt in this directory location. 
 You can then type python home.py to get started. 
 
-<h2>Macintosh</h2>
+<h4>Macintosh</h4>
 While still in the terminal type in:
 cd GraphTheoryProject2020
 This will change the directory to the directory of this project. 
@@ -85,7 +85,7 @@ Then simply type python3 home.py to get started
 After clicking the big green button again, you can opt to download this zip of this project as well. 
 After downloading the zip file, you can unzip it and then follow the same steps provided above for each system.
 Installing Python
-<h2>Windows:</h2>
+<h4>Windows:</h4>
 Please check which type of operating system your computer is running before starting this procedure.
 To do this 
 Start typing system information into your search bar on your windows machine.
@@ -99,7 +99,7 @@ If you have a 64-bit operating system you can choose Windows x86-64 executable i
 Otherwise if your system is a 32-bit computer you can choose Windows x86 executable installer
 Download the installer required for your system and run the installer.
 
-<h2>Macintosh</h2>
+<h4>Macintosh</h4>
 Open your browser
 Install homebrew- follow this link: https://brew.sh/
 Or just type the following into your terminal: 
@@ -168,7 +168,7 @@ E or the empty regular expression element.
 This just simply means empty. 
 Below I will show you an example of Thompsons construction using a diagram. 
 
-![thomp](images/Thomp.png)
+![thomp](images/Thomp.JPG)
 
 Using the examples given above we can work out the final state of this regular expression.
 The example given here is a.b|b* which we know means ab or b or multiple b’s
