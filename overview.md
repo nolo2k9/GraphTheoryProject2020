@@ -117,33 +117,37 @@ Running this command will in turn run the tests included in this project and the
 <h1>Algorithm</h1>
 This section describes the algorithm used in this project. The algorithm in question is Thompson’s construction. 
 About the algorithm
-This algorithm created by Ken Thompson is a method of transforming regular expressions into an equivalent NFA (Nondeterministic finite automata). To understand NFA’s we must first look at what a finite state machine is. This machine is an abstraction that has several states.  
+This algorithm created by Ken Thompson is a method of transforming regular expressions into an equivalent NFA (Nondeterministic finite automata). To understand NFA’s we must first look at what a finite state machine is. This machine is an abstraction that has several states, there are two types of state machines Deterministic (DFA) and non-Deterministic (NFA)
+DFA’S
 To visualize this, imagine a mobile phone that has 5 states on, off, camera, capture image, view image. With this phone it can only go into the next state once it has passed the other state and once it has passed one state it has to go into the next state. It cannot go back to a previous state, it cannot stay in the same it must go forward until it reaches the finishing state.
-
 Imagine that the default state is off, the phone can execute commands based on instructions that have been given to it to reach the next state. When the power button is pressed the phone moves between the off state to the on state. This is based on what state it was in previously. 
 For arguments sake lets imagine the phone is turned on and the user moves to the camera state where they can capture an image. When the user clicks the button to take a photo it will move into a new state capture image. Then they must view the image taken, they must click a button and move into the view image state. So, for the user to be able to view that image the phone had to of been in and completed all those states at least once. Please see this simple image below to visualize this.
 
 ![ex1](images/example1.png)
 
 As you can see with this example above. If the phone is powered off and the camera button is pressed nothing will happen because it has not yet reached its on state. Then to explain the state process. The phone starts off in the off state when it is powered on it moves to the on state. When the phone has been powered on it can then reach the camera state, then take photo, then view photo. These instructions or commands must be done in this order to reach the final state. It cannot be turned on and then off, it must complete all the steps until finished
+<br>
 Finite state machines can be presented by a sequence of commands that have or can be followed to reach a certain state. 
-State machines are deterministic. This means that if the starting state is known you should be able to predict the finish state when completed. There are no multiple or random choices, in the movement between states. Each finishing state can be predicted because there is exactly one finishing state. In other words, DFA’S have exactly one state that they can transition to when in any given state. A simple way would be to think of the word “deterministic” in deterministic finite automata would be that the outcome **can be determined**. 
+DFA state machines are deterministic. This means that if the starting state is known you should be able to predict the finish state when completed. There are no multiple or random choices, in the movement between states. Each finishing state can be predicted because there is exactly one finishing state. In other words, DFA’S have exactly one state that they can transition to when in any given state and we already know what that state will be. A simple way to differentiate an DFA would be to think of the word “deterministic” in deterministic finite automata would be that the outcome can be determined. 
 
 <h2>NFA’S</h2>
-An NFA is the opposite to a DFA in every sense of the word, it does not obey the rules followed by DFA’S. It allows more than one possible outcome and when put on a large scale is unpredictable. If you start in one state you can stay in that state, or if the right conditions are met you can move to the next state and so on. Please see the diagram below
+An NFA is the opposite to a DFA in every sense of the word, it does not obey the rules followed by DFA’S. If given a current state, there could be multiple next states and finishing states cannot be predetermined. The next state could be chosen randomly or chosen in parallel. If you start in one state you can stay in that state, or if the right conditions are met you can move to the next state and so on. Please see the diagram below
 
 ![ex2](images/example2.png)
 
 
 With an NFA it does not matter what state the phone goes to next if the prerequisite conditions have been met. With this hypothetical phone lets imagine the default state is off, it can move from the off state to the on state and from there it can view images, then go to the camera, it can take an image by pressing a button and then go to the camera state. It can go from the view images state to off. The result is much harder to predict than that of a DFA because it does not follow a specific pattern. It is non-deterministic the outcome cannot be determined. 
+<br>
 Let us look at another example of how NFA’S work. Although this diagram is questionable looking it fits this purpose. This is again in the context of a phone or device but with different features. 
 
 ![dia](images/regular.png)
 
 Let us imagine a string of commands or inputs **0100101**
 
-We begin from the start state, “off” and if we look at the first of the inputs 0. The action outlined for this state for the action 0 is to remain in the same off state. This is because the arrow is pointing to remain in the same state. The next number is 1 which points to the on state, so it moves to the next state which is “on”. The next 2 numbers are 0 with means the phone just remains on. The next command or input is a 1 which means we move to play music state, it then remains in this state because the command or input is 0. This happens until the input changes to 1 and which leads the state goes back to just being on. 
+We begin from the start state, “off” and if we look at the first of the inputs 0. The action outlined for this state for the action 0 is to remain in the same off state. This is because the arrow is pointing to remain in the same state. The next number is 1 which points to the on state, so it moves to the next state which is “on”. The next 2 numbers are 0 with means the phone just remains on. The next command or input is a 1 which means we move to play music state. We then come to something new. There is a zero to both stay and leave the play music state, as well as a one. This could be chosen at random or could work parallel, there is no way to determine what’s gong to happen. Please note that this image is for example purposes only
+<br>
 This simple diagram helps us understand how to understand the behavior of NFA’S. This in turn will give us a greater understanding to how Thompsons construction works.
+rks.
 
 <h2>Thompsons construction</h2>
 The algorithm 
@@ -185,18 +189,25 @@ The same methods/regular expressions can be applied to this application. Once yo
 
 Python with argparse
 http://zetcode.com/python/argparse/
+<br>
 Steps to install python
 https://realpython.com/installing-python/#step-1-download-the-python-3-installer
+<br>
 Home brew webpage 
 https://brew.sh/
+<br>
 Thompsons construction Wikipedia 
 https://en.wikipedia.org/wiki/Thompson%27s_construction
+<br>
 Reddit page on State machines, DFA’S, NFA’S
 https://www.reddit.com/r/explainlikeimfive/comments/9mbkd2/eli5_what_is_a_dfa_and_nfa_with_regard_to/
+<br>
 Ian Mcloughlin’s slides on infinite automata
 https://github.com/ianmcloughlin/slides-finite-automata/raw/master/slides.pdf
+<br>
 Thompsons construction diagram taken from Ian Mcloughlin’s slides on Thompsons construction
 https://github.com/ianmcloughlin/slides-thompson/raw/master/slides.pdf
+<br>
 Mastering markdown
 https://guides.github.com/features/mastering-markdown/
 
