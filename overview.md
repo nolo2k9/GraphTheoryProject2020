@@ -1,3 +1,7 @@
+**Author-Keith Nolan**
+**College Number-g00351932**
+<br>
+
 <h1>Introduction</h1>
 
 This repository contains a regular expression engine. Which is built using an algorithm called **Thompsons construction**. Thompsons construction is a method of transforming a **regular expression** into an equivalent **NFA (Nondeterministic finite automata)**. In this program an  expression is entered in by the user or generated randomly followed by a string to compare to the regular expression. The application then outputs a **True or False** statement indicating whether the entered expression and comparable string is in fact a regular expression when executed together.

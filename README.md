@@ -1,3 +1,6 @@
+**Author-Keith Nolan**
+**College Number-g00351932**
+<br>
 **Graph Theory Project 2020**
 
 ```
