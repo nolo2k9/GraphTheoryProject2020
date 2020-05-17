@@ -106,8 +106,13 @@ It will then return the results.
 
 **How to use this project**
 ```
+(Please note this was how to run the project before updates were to be made to enhance the project due to covid)
 To compile and run the code written in the script 'regex.py' on your console window in the correct directory execute the statement (python parser.py).
 Similarly, if you want to run the test script created for this project execute the command (python test.py).
+
+How to run project now
+
+To start the main menu and get started using this project run: python home.py
 ```
 
 

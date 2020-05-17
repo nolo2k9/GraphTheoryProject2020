@@ -144,10 +144,9 @@ Let us look at another example of how NFA’S work. Although this diagram is que
 
 Let us imagine a string of commands or inputs **0100101**
 
-We begin from the start state, “off” and if we look at the first of the inputs 0. The action outlined for this state for the action 0 is to remain in the same off state. This is because the arrow is pointing to remain in the same state. The next number is 1 which points to the on state, so it moves to the next state which is “on”. The next 2 numbers are 0 with means the phone just remains on. The next command or input is a 1 which means we move to play music state. We then come to something new. There is a zero to both stay and leave the play music state, as well as a one. This could be chosen at random or could work parallel, there is no way to determine what’s gong to happen. Please note that this image is for example purposes only
+We begin from the start state, “off” and if we look at the first of the inputs 0. The action outlined for this state for the action 0 is to remain in the same off state. This is because the arrow is pointing to remain in the same state. The next number is 1 which points to the on state, so it moves to the next state which is “on”. The next 2 numbers are 0 with means the phone just remains on. The next command or input is a 1 which means we move to play music state. We then come to something new. There is a zero to both stay and leave the play music state, as well as a one. The subsequent state could be chosen at random or could work parallel, there is no way to determine what’s going to happen. **Please note that this image is for example purposes only**
 <br>
 This simple diagram helps us understand how to understand the behavior of NFA’S. This in turn will give us a greater understanding to how Thompsons construction works.
-rks.
 
 <h2>Thompsons construction</h2>
 The algorithm 
